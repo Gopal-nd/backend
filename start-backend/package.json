@@ -1,0 +1,11 @@
+{
+  "name": "first-backend",
+  "version": "1.0.0",
+  "description": "backend with chai aur code",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+  },
+  "author": "Gopal",
+  "license": "ISC"
+}

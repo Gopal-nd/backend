@@ -1,7 +1,7 @@
 console.log("Chai aur code");
 const env = require("dotenv").config()
 const express = require('express')
-const port = process.env.port
+const port = https://backend-wine-alpha.vercel.app/
 const app = express()
 const gopal = {
     "login": "Gopal-nd",
