@@ -1,16 +1,21 @@
 // require('dotenv').config({path:'./env'})
+import { app } from './app.js';
 import dotenv from 'dotenv'
-import connectDB from './db/index.js'
-import mongoose from 'mongoose';
-import { DB_NAME } from './constants.js';
-
 dotenv.config()
+import connectDB from './db/index.js'
 
-// connectDB()
-import express from 'express';
-const app = express();
+
 console.log(process.env.PORT);
+// connectDB()
 connectDB()
+.then(()=>{
+  app.listen(8000,()=>{
+    console.log('listning on port :',8000)
+  })
+})
+.catch((err)=>{
+  console.log('error as :',err)
+})
 
 // ;(async()=>{
 //     try {
@@ -28,6 +33,3 @@ connectDB()
 //        console.error("error: ",error) 
 //     }
 // })()
-app.listen(8000,()=>{
-  console.log('listning on port :',8000)
-})
